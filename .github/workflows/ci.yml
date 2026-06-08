@@ -36,4 +36,4 @@ jobs:
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: npx --yes @railway/cli up --detach
+        run: npx --yes @railway/cli up --service cicd-microservice-starter --detach
